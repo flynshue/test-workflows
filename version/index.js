@@ -12,7 +12,7 @@ try {
   // const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
   const context = github.context
-  console.log("git sha: " + context.sha)
+  console.log("git ref: " + context.ref)
 } catch (error) {
   core.setFailed(error.message);
 }

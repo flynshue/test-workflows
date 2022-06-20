@@ -14,6 +14,7 @@ try {
   const context = github.context
   console.log("git ref: " + context.ref)
   console.log("git sha: " + context.sha)
+  console.log("payload keys: " + context.payload.keys())
 } catch (error) {
   core.setFailed(error.message);
 }

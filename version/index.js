@@ -13,7 +13,7 @@ try {
   // console.log(`The event payload: ${payload}`);
   const context = github.context
   // console.log("git ref: " + context.ref)
-  console.log("git sha: " + context.sha)
+  console.log("git sha: " + context.sha.substring(0, 4))
 } catch (error) {
   core.setFailed(error.message);
 }

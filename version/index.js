@@ -12,7 +12,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
   let payloadJSON = JSON.parse(payload)
-  console.log(payloadJSON.keys())
+  console.log(payloadJSON.sha)
   // const context = github.context
   // console.log("git ref: " + context.ref)
   // console.log("git sha: " + context.sha)

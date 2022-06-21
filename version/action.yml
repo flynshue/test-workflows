@@ -1,13 +1,8 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+name: 'Tag Version'
+description: 'Create a new tag version to be used as a docker tag based on the git source reference'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  version: # id of output
+    description: 'tag version'
 runs:
   using: 'node16'
   main: 'index.js'

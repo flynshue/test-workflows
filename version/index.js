@@ -9,13 +9,11 @@ try {
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
-  console.log(github.context.payload.after)
-  // const context = github.context
+  // const payload = JSON.stringify(github.context.payload, undefined, 2)
+  // console.log(`The event payload: ${payload}`);
+  const context = github.context
   // console.log("git ref: " + context.ref)
-  // console.log("git sha: " + context.sha)
-  // console.log("payload keys: " + context.payload.keys())
+  console.log("git sha: " + context.sha)
 } catch (error) {
   core.setFailed(error.message);
 }

@@ -11,8 +11,7 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
-  let payloadJSON = JSON.parse(payload)
-  console.log(payloadJSON['sha'])
+  console.log(github.context.payload.after)
   // const context = github.context
   // console.log("git ref: " + context.ref)
   // console.log("git sha: " + context.sha)

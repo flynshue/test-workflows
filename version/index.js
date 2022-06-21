@@ -5,7 +5,7 @@ try {
   const context = github.context;
   let gitSourceRef = context.sha.substring(0, 4);
   makeTagVersion(gitSourceRef)
-  core.setOutput('version', gitSourceRef);
+  core.setOutput('version', makeTagVersion(gitSourceRef));
 } catch (error) {
   core.setFailed(error.message);
 }

@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM docker pull golang:alpine3.16
+FROM golang:alpine3.16
 
 WORKDIR $GOPATH/src/
 ADD . .
